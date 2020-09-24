@@ -6965,6 +6965,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 18912491}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &385500066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385500059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c6afbe3cea1b04b861f54e7e080e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theEnemy: {fileID: 100030, guid: 2314ce3a3eecf4816bad3c9eca4de2e1, type: 3}
+  xPos: 0
+  zPos: 0
+  enemyCount: 0
 --- !u!1 &393227519
 GameObject:
   m_ObjectHideFlags: 0

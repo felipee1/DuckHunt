@@ -20,11 +20,35 @@ public class SpawnEnemy : MonoBehaviour
     {
        while (enemyCount < 10)
         {
-            //TODO FAZER A PORRA DO ENEMY APARECER NA FRENTE
-            Vector3 spawnPos = GameObject.Find("Player").transform.forward*20;
-            xPos = Random.Range(-10, 10);           
-            Instantiate(theEnemy, new Vector3(xPos,1, spawnPos.z), Quaternion.identity);
-            yield return new WaitForSeconds(0.9f);
+            int i = Random.Range(0, 3);
+            if (i == 0)
+            {
+                xPos = Random.Range(-40, 40);
+                zPos = Random.Range(20, 40);
+            }
+            else
+            {
+                if (i == 1)
+                {
+                    xPos = Random.Range(-40, 40);
+                    zPos = Random.Range(-20, -40);
+                }
+                else
+                {
+                    if (i == 2)
+                    {
+                        xPos = Random.Range(20, 40);
+                        zPos = Random.Range(40, -40);
+                    }
+                    else
+                    {
+                        xPos = Random.Range(-20, -40);
+                        zPos = Random.Range(40, -40);
+                    }
+                }
+            }
+            Instantiate(theEnemy, new Vector3(xPos, 1, zPos), Quaternion.identity);
+            yield return new WaitForSeconds(5f);
             enemyCount += 1;
         }
     }

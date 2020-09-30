@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using TMPro;
-using Boo.Lang;
+using System.Collections.Generic;
 
 namespace VRStandardAssets.Utils
 {

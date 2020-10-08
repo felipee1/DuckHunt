@@ -17,16 +17,18 @@ public class FireProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mousePos.z = this.transform.position.z;
-		Vector3 direction = Vector3.zero;  // = ?? 
-        
-		if (Input.GetMouseButtonDown(0))
-		{			
-            print("Entrei");
-			// Instantiate (projectile,direction,Quaternion.identity);
-            GameObject proj = Instantiate(projectile, (transform.position), Quaternion.identity) as GameObject;
+     //   mousePos.z = this.transform.position.z;
+	//	Vector3 direction = Vector3.zero;  // = ?? 
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            // GameObject proj = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject; 
             // Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            proj.GetComponent<Projectile>().travelDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-		}
+            // // mousePosition.z = 0;
+            // proj.GetComponent<Projectile>().travelDirection = mousePosition - transform.position;
+            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 direction = transform.position + (mousePos - transform.position).normalized * distanceToSpawnFromPlayer;
+            Instantiate(projectile, direction, Camera.main.transform.rotation);
+        }
     }
 }

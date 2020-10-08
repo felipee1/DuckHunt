@@ -13,26 +13,14 @@ public class Projectile : MonoBehaviour {
 
 	void Start () {
 
-
-
-        //Rotate Projectile to "point to mouse direction": Lazy Way
-        //transform.LookAt(Input.mousePosition); //rotate object to face mousePosition
-
-        //Rotate Projectile to "point to mouse direction" "Right" Way
-        
-        //find angle between travel direction and projectile direction
-        float angle = Mathf.Atan2(travelDirection.y - transform.right.y, travelDirection.x - transform.right.x) * Mathf.Rad2Deg;
-        //rotate it by this angle
-        transform.Rotate(new Vector3(0, 0, angle));
-
-	}
-	
+    }
 	
 	void Update () {
 
-        // transform.Translate(travelDirection.normalized * TravelSpeed, Space.World);
-        directionToMove = transform.forward.normalized;        
+        //transform.Translate(travelDirection.normalized * TravelSpeed, Space.World);
+        directionToMove = transform.forward;
         transform.position += (directionToMove * speed);
+        // transform.rotation = (transform.rotation);
         if (destroy)
         {
             destroy = false;

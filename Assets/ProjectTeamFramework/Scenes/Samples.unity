@@ -203,6 +203,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8772697664595220394, guid: e392aca4d9373164bb2ede4beafafd16,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e392aca4d9373164bb2ede4beafafd16, type: 3}
 --- !u!1 &18912492 stripped
@@ -516,6 +521,7 @@ MonoBehaviour:
   OnUpEvent: 0
   OnGrabEvent: 0
   OnReleaseEvent: 0
+  targets: []
 --- !u!65 &131998989
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -970,6 +976,7 @@ MonoBehaviour:
   OnUpEvent: 0
   OnGrabEvent: 0
   OnReleaseEvent: 0
+  targets: []
 --- !u!65 &177464767
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1844,6 +1851,7 @@ MonoBehaviour:
   OnUpEvent: 0
   OnGrabEvent: 0
   OnReleaseEvent: 0
+  targets: []
 --- !u!114 &321715611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6978,9 +6986,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theEnemy: {fileID: 100030, guid: 2314ce3a3eecf4816bad3c9eca4de2e1, type: 3}
-  xPos: 0
-  zPos: 0
   enemyCount: 0
+  enemyLimit: 80
+  spawnTime: 0.11
+--- !u!114 &385500067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385500059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 993a174a375dd18408c80a4495419ee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 170202, guid: 90075c41c63e2b044a71bd2acfe28db9, type: 3}
+  mousePos: {x: 0, y: 0, z: 0}
+  speed: 3
+  distanceToSpawnFromPlayer: 2
 --- !u!1 &393227519
 GameObject:
   m_ObjectHideFlags: 0
@@ -7039,6 +7063,7 @@ MonoBehaviour:
   OnUpEvent: 0
   OnGrabEvent: 0
   OnReleaseEvent: 0
+  targets: []
 --- !u!65 &393227522
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7188,6 +7213,7 @@ MonoBehaviour:
   OnUpEvent: 0
   OnGrabEvent: 0
   OnReleaseEvent: 0
+  targets: []
 --- !u!65 &415556869
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7911,6 +7937,7 @@ MonoBehaviour:
   OnUpEvent: 0
   OnGrabEvent: 0
   OnReleaseEvent: 0
+  targets: []
 --- !u!114 &490103453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8259,6 +8286,7 @@ MonoBehaviour:
   OnUpEvent: 0
   OnGrabEvent: 0
   OnReleaseEvent: 0
+  targets: []
 --- !u!54 &501482013
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9096,6 +9124,7 @@ MonoBehaviour:
   OnUpEvent: 1
   OnGrabEvent: 1
   OnReleaseEvent: 1
+  targets: []
 --- !u!65 &876712786
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9189,6 +9218,7 @@ MonoBehaviour:
   OnUpEvent: 0
   OnGrabEvent: 0
   OnReleaseEvent: 0
+  targets: []
 --- !u!65 &888524239
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9529,6 +9559,7 @@ MonoBehaviour:
   OnUpEvent: 1
   OnGrabEvent: 1
   OnReleaseEvent: 1
+  targets: []
 --- !u!65 &942140883
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9718,6 +9749,7 @@ MonoBehaviour:
   OnUpEvent: 0
   OnGrabEvent: 0
   OnReleaseEvent: 0
+  targets: []
 --- !u!114 &1006232367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10263,6 +10295,7 @@ MonoBehaviour:
   OnUpEvent: 0
   OnGrabEvent: 0
   OnReleaseEvent: 0
+  targets: []
 --- !u!1 &1210783493
 GameObject:
   m_ObjectHideFlags: 0
@@ -10965,6 +10998,7 @@ MonoBehaviour:
   OnUpEvent: 0
   OnGrabEvent: 0
   OnReleaseEvent: 0
+  targets: []
 --- !u!1 &1457838686
 GameObject:
   m_ObjectHideFlags: 0
@@ -11082,6 +11116,7 @@ MonoBehaviour:
   OnUpEvent: 0
   OnGrabEvent: 0
   OnReleaseEvent: 0
+  targets: []
 --- !u!114 &1457838692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11354,6 +11389,7 @@ MonoBehaviour:
   OnUpEvent: 0
   OnGrabEvent: 0
   OnReleaseEvent: 0
+  targets: []
 --- !u!65 &1514720807
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11584,6 +11620,7 @@ MonoBehaviour:
   OnUpEvent: 0
   OnGrabEvent: 0
   OnReleaseEvent: 0
+  targets: []
 --- !u!65 &1663025984
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12542,6 +12579,7 @@ MonoBehaviour:
   OnUpEvent: 1
   OnGrabEvent: 0
   OnReleaseEvent: 0
+  targets: []
 --- !u!65 &1871671567
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13001,6 +13039,7 @@ MonoBehaviour:
   OnUpEvent: 0
   OnGrabEvent: 0
   OnReleaseEvent: 0
+  targets: []
 --- !u!65 &2006472469
 BoxCollider:
   m_ObjectHideFlags: 0

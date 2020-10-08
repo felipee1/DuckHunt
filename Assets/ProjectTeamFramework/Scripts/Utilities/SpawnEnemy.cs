@@ -5,10 +5,8 @@ using UnityEngine;
 public class SpawnEnemy : MonoBehaviour
 {
     public GameObject theEnemy;
-    public float xPos;
-    public float spawnRadius = 7;
-    public float zPos;
     public int enemyCount;
+    public int enemyLimit =10;
     public float spawnTime;
 
     // Start is called before the first frame update
@@ -18,9 +16,11 @@ public class SpawnEnemy : MonoBehaviour
     }
     IEnumerator EnemyDrop()
     {
-       while (enemyCount < 10)
+       while (enemyCount < enemyLimit)
         {
-            int i = Random.Range(0, 3);
+            int xPos;
+            int zPos;
+            int i = Random.Range(0, 4);
             if (i == 0)
             {
                 xPos = Random.Range(-40, 40);
@@ -47,8 +47,9 @@ public class SpawnEnemy : MonoBehaviour
                     }
                 }
             }
+
             Instantiate(theEnemy, new Vector3(xPos, 1, zPos), Quaternion.identity);
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(spawnTime);
             enemyCount += 1;
         }
     }

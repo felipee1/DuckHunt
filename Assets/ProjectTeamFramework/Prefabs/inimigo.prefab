@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2224256621760825072}
   - component: {fileID: 2224256621760825075}
   - component: {fileID: 2224256621760825071}
+  - component: {fileID: 1291081459355334593}
   m_Layer: 0
   m_Name: inimigo
   m_TagString: Duck
@@ -89,7 +90,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2224256621760825074}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -110,3 +111,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1291081459355334593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2224256621760825074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c829cfd2d6f1046a3a1d914b4fc72e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 7819574391842170454, guid: e392aca4d9373164bb2ede4beafafd16, type: 3}
+  speed: 0.01

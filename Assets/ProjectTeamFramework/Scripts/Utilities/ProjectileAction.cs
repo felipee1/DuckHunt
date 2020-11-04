@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ProjectileAction : MonoBehaviour {
    
-  //  public int score = 0; //Pontuação do player
+  //  public static int score = 0; //Pontuação do player
     // Use this for initialization
     void Start () {
     }
